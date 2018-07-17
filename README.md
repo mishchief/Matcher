@@ -1,4 +1,4 @@
-# Matchmaker
+# Matcher
 
 The matchmaker service solution for your gaming needs!
 

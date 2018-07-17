@@ -2,10 +2,14 @@ import Matcher from '../';
 import { data } from './testData';
 var testMatcher = new Matcher;
 
-testMatcher.on('match', (obj) => {
-    console.log("It's a match! It took: ", obj.mmTime, ' seconds.' );
-    console.log(obj.a); console.log(obj.b);
+testMatcher.on('match', (e) => {
+    console.log("It's a match! It took: ", e.mmTime, ' seconds.' );
+    console.log(e.a); console.log(e.b);
 });
+testMatcher.on('stop', (e) => {
+    console.log('No more players in queue, or no more suitable matches');
+    console.log('Finished running in: ', e.qTime, ' seconds.');
+})
 
 var playerQueue = [
 {mmr: 3242, username: "secured line"},
