@@ -1,0 +1,22 @@
+{
+  "name": "Matcher",
+  "version": "1.0.0",
+  "description": "Matchmaking application using Node js, mocha for unit testing, and basic mock data",
+  "main": "index.js",
+  "scripts": {
+    "testCase": "babel-node ./tests/testCase.js --presets es2015,stage-2",
+    "mocha": "mocha --compilers js:babel-core/register ./tests/test.mocha.js"
+  },
+  "keywords": ["Matchmaking", "back-end", "service"],
+  "author": "Mijail N. Montero",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
