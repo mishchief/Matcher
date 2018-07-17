@@ -74,10 +74,10 @@ class Matcher extends EventEmitter {
         };
         // Record time, log stopping message, clear interval to stop the function.
         this.stop = () => {
-            qFinish = performance.now();
-            qTime = qFinish - qStart;
-            console.log('No more players in queue');
-            console.log('Finished running in: ', (qTime / 1000).toFixed(2), ' seconds.');
+            // qFinish = performance.now();
+            // qTime = qFinish - qStart;
+            // console.log('No more players in queue');
+            // console.log('Finished running in: ', (qTime / 1000).toFixed(2), ' seconds.');
             clearInterval(this.time);
         };
     }

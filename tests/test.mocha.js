@@ -34,25 +34,24 @@ describe('Matchmaking', () => {
     describe('Two Player Matchmaking', () => {
         it('Should emit a match event', function (done) {
             twoMatch.start();
-            this.timeout(3000); //timeout with an error if done() isn't called within three seconds
+            this.timeout(3000);
             twoMatch.on('match', done());
-            // execute some code which should trigger 'some_event' on myObj
         });
-        it('Match event should return 2 objects', function (done) {
-            this.timeout(3000); //timeout with an error if done() isn't called within three seconds
+        it('Match event should return 3 objects (Player 1, player 2, timestamp)', function (done) {
+            this.timeout(3000);
             twoMatch.on('match', (obj) => {
                 assert.typeOf(obj.a, 'object', 'Sends object `a` correctly');
                 assert.typeOf(obj.b, 'object', 'Sends object `b` correctly');
-                if (Object.keys(obj).length === 2) {
+                if (Object.keys(obj).length === 3) {
                     done();
                 }
             });
         })
     })
-    describe('Two Player Matchmaking', () => {
+    describe('Multiple players (more than 2)', () => {
         it('8 players should find matches', function (done) {
             multiMatch.start();
-            this.timeout(10000); //timeout with an error if done() isn't called within ten seconds
+            this.timeout(10000);
             let matches = [];
             multiMatch.on('match', (obj) => {
                 assert.typeOf(obj.a, 'object', 'Sends object `a` correctly');

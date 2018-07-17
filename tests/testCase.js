@@ -27,7 +27,7 @@ var rule = (a, b) => {
 };
 testMatcher.rule = rule;
 testMatcher.playerQueue = playerQueue;
-testMatcher.playerQueue = data; // Uncomment this to scale to big dataset (500 records to match)
+// testMatcher.playerQueue = data; // Uncomment this to scale to big dataset (500 records to match)
 testMatcher.conf.checkinterval = 500; // default
 console.log(testMatcher.playerQueue);
 testMatcher.start();

@@ -37,7 +37,7 @@ matcher.start();
 - Babel (for ES6)
 
 # Components
-.rule
+__.rule__
 
 ```
 matcher.rule = function(a,b) {
@@ -49,17 +49,17 @@ matcher.rule = function(a,b) {
 }
 ```
 
-.conf
+__.conf__
 
 ```
 matcher.conf.checkinterval = 500;
 matcher.conf.maxIterations = 1;
 ```
-*queueInterval* is the time the function waits to check the queue again. 500 Default.
+__queueInterval__ is the time the function waits to check the queue again. 500 Default.
 
-*maxIterations* is the number of matches the app can give between iterations. 1 Default.
+__maxIterations__ is the number of matches the app can give between iterations. 1 Default.
 
-.playerQueue
+__.playerQueue__
 
 Player queue that needs to be set, encompassed by the player objects that are going to be matched.
 ```
@@ -68,14 +68,17 @@ testMatcher.playerQueue = playerQueue;
 
 # Methods
 
-.addToQueue
+__.addToQueue__
 
 Lets you push players into the queue.
 
-.start
+__.start__
 
 Starts the service.
 
-.stop
+__.stop__
 
 Stops the service.
+
+# Author
+Mijail N. Montero
