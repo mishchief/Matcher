@@ -30,6 +30,24 @@ matcher.playerQueue = [
 matcher.start();
 ```
 
+# Tests
+
+There are 2 test scripts that can be run:
+
+__Test Case__
+
+Test case runs an example of how the service works. It works with a small dataset and a big data set, I've included a file called testData.js with 500 player objects, feel free to use it to test the app's scalability or if you want to add more data feel freen, I've tested with up to 5000 players. This script can be run with the following command:
+```
+npm run testCase
+```
+
+__Mocha__
+
+Implementation of mocha to run some unit tests. Can be run with the following command:
+```
+npm run mocha
+```
+
 # Technologies / Libraries
 
 - Node js
